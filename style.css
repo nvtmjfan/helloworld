@@ -3,12 +3,22 @@ img {
 }
 
 body {
-    padding-top: 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-.container {
-    width: 75%;
-    background-color: rgb(105, 96, 96);
-    margin: auto;
-    padding-bottom: 1em;
+@media (min-width: 1500px) {
+    .container {
+        box-shadow: 5px 5px 5px 5px #888;
+        padding-bottom: 1em;
+    }
+}
+
+h2 {
+    background-color: #888;
+    padding-bottom: 0.2em;
+}
+
+.company {
+    padding-left: 2em;
 }
