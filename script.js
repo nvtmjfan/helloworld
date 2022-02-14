@@ -1,7 +1,7 @@
 const medaid_pro3 = {
     "Project": "Oncology Infomation System (OIS)",
     "Description": "<p>Import, export DICOM file. Store ratheory treamtment plan of patient: eg beam, control points, store testings of patient include image CT, MRI. Support doctor view plan, view image, send plan to RV.</p>",
-    "Platform": "<i>Frontend is Angular 6+</i><br><i>Backend is Restfull API .Net Framework 4.6.1 c#, Entity Framework</i><br><i>Database is SQL server 2017</i>",
+    "Platform": "<i>Frontend is Angular 6+, Silmusoft Report</i><br><i>Backend is Restfull API .Net Framework 4.6.1 c#, Entity Framework</i><br><i>Database is SQL server 2017</i>",
     "Tool": "Visual Code, Visual studio 2019, Sql management tool",
     "TeamSize": "Include 5 developers, 2 QAs and 1 PM",
     "Position": "Developer, from Aug 2018 to current"
@@ -53,6 +53,35 @@ const anBinh_pro1 = {
     "Position": "Developer, from Dec 2015 to Nov 2017"
 }
 
+// For Goline
+const goline_pro2 = {
+    "Project": "VGaia Back office, outsource for Gaia Japan",
+    "Description": "<p>Desktop app to support employee of stock company resolve following business: order securities, margin, advance, mortgage...</p>",
+    "Platform": "<i>Frontend is java swing</i><br><i>Backend is a service writen by java, Crystal Report</i><br><i>Database is Oracle</i>",
+    "Tool": "Eclipse, Toad",
+    "TeamSize": "Include 7 developers and 4 QAs",
+    "Position": "Developer, from Jan 2013 to Jun 2014"
+}
+
+const goline_pro1 = {
+    "Project": "Dolphin Back office",
+    "Description": "<p>Desktop app to support employee of stock company resolve following business: order securities, margin, advance, mortgage...</p>",
+    "Platform": "<i>Frontend is Winform c#, Crystal Report</i><br><i>Backend is web service ASP.NET c#, ADO.NET</i><br><i>Database is SQL server</i>",
+    "Tool": "Visual studio 2010, Sql management tool",
+    "TeamSize": "Include 3 developers and 3 QAs",
+    "Position": "Developer, from Mar 2012 to Feb 2015"
+}
+
+// For BKAV
+const goline_bkav = {
+    "Project": "Human Resource Management System",
+    "Description": "<p>Overall management of human resources, with the highest customization ability, to meet the scale from Groups, Corporations to small and medium enterprises.</p>",
+    "Platform": "<i>ASP.NET MVC c#</i><br><i>Database is SQL server</i>",
+    "Tool": "Visual Studio 2010, Sql management tool, Microsoft word, UML tool Rational Rose",
+    "TeamSize": "Include 6 developers",
+    "Position": "Developer, write document design analysis and code from Mar 2011 to Feb 2012"
+}
+
 function bodyOnload() {
     let now = new Date();
     document.getElementById('age').innerHTML = now.getFullYear() - 1988;
@@ -78,4 +107,12 @@ function bodyOnload() {
     projectsAtAnBinh.forEach(x => ret += fn(x));
     document.getElementById('projects_anbinh').innerHTML = ret;
 
+    // Load data for Goline
+    ret = '';
+    let projectsAtGoline = [goline_pro2, goline_pro2];
+    projectsAtGoline.forEach(x => ret += fn(x));
+    document.getElementById('projects_goline').innerHTML = ret;
+
+    // Load data for BKAV
+    document.getElementById('projects_bkav').innerHTML = fn(goline_bkav);
 }
