@@ -1,5 +1,4 @@
 img {
-    height: 225px;
     margin-top: 10px;
 }
 
@@ -11,4 +10,5 @@ body {
     width: 75%;
     background-color: rgb(105, 96, 96);
     margin: auto;
+    padding-bottom: 1em;
 }
