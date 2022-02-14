@@ -13,7 +13,7 @@ let medaid_pro2 = {
     "Platform": "<i>Frontend is silverlight WPF (xaml file) c#</i><br><i>Backend is WCF window service c#</i><br><i>Database is SQL server</i>",
     "Tool": "Visual studio 2010, Sql management tool",
     "TeamSize": "Include 3 developers and 3 QAs",
-    "Position": "Developer, from Dec 2017 to Jun 2018"
+    "Position": "Developer, from Jan 2021 to Arp 2021"
 }
 
 let medaid_pro1 = {
