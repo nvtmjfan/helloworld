@@ -55,7 +55,7 @@ const anBinh_pro1 = {
 
 // For Goline
 const goline_pro2 = {
-    "Project": "VGaia Back office, outsource for Gaia Japan",
+    "Project": "VGaia Back office, outsourcing for Gaia Japan",
     "Description": "<p>Desktop app to support employee of stock company resolve following business: order securities, margin, advance, mortgage...</p>",
     "Platform": "<i>Frontend is java swing</i><br><i>Backend is a service writen by java, Crystal Report</i><br><i>Database is Oracle</i>",
     "Tool": "Eclipse, Toad",
