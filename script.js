@@ -1,6 +1,6 @@
 const medaid_pro3 = {
     "Project": "Oncology Infomation System (OIS)",
-    "Description": "<p>Import, export DICOM file. Store ratheory treamtment plan of patient: eg beam, control points, store testings of patient include image CT, MRI. Support doctor view plan, view image, send plan to RV.</p>",
+    "Description": "<p>Import, export DICOM file. Store radiotherapy treamtment plan of patient: eg beam, control points, store testings of patient include image CT, MRI. Support doctor to view plan, view image, send plan to RV.</p>",
     "Platform": "<i>Frontend is Angular 6+, Silmusoft Report</i><br><i>Backend is Restfull API .Net Framework 4.6.1 c#, Entity Framework</i><br><i>Database is SQL server 2017</i>",
     "Tool": "Visual Code, Visual studio 2019, Sql management tool",
     "TeamSize": "Include 5 developers, 2 QAs and 1 PM",
@@ -9,16 +9,16 @@ const medaid_pro3 = {
 
 const medaid_pro2 = {
     "Project": "Review & Verify (RV)",
-    "Description": "<p>Store diagnosis of patient, store consultant minutes of patient, store testings of patient include image CT, MRI, Pikka result. Support doctor view and print report.</p>",
-    "Platform": "<i>Frontend is silverlight WPF (xaml file) c# call Restful API of Control Console</i>",
+    "Description": "<p>Receive radiotherapy treatment plan of patient from OIS (DICOM file and Restful API), send the plan to Control Console (via Restful API of Control Console). Support doctor to deliver the plan and receive record treatment from Control Console, send record treatment comeback OIS.</p>",
+    "Platform": "<i>Winform c# call Restful API of Control Console</i>",
     "Tool": "Visual studio 2019",
-    "TeamSize": "Include 3 developers and 3 QAs",
+    "TeamSize": "Include 3 developers",
     "Position": "Developer, from Jan 2021 to Arp 2021"
 }
 
 const medaid_pro1 = {
     "Project": "Electronic medical records (EMR)",
-    "Description": "<p>Store diagnosis of patient, store consultant minutes of patient, store testings of patient include image CT, MRI, Pikka result. Support doctor view and print report.</p>",
+    "Description": "<p>Store diagnosis of patient, store consultant minutes of patient, store testings of patient include image CT, MRI, Pikka result. Support doctor to view and print report.</p>",
     "Platform": "<i>Frontend is silverlight WPF (xaml file) c#</i><br><i>Backend is WCF window service c#, Entity Framework</i><br><i>Database is SQL server</i>",
     "Tool": "Visual studio 2010 to code silverlight, Visual studio 2017 for backend, Sql management tool",
     "TeamSize": "Include 3 developers and 3 QAs",
@@ -37,7 +37,7 @@ const anBinh_pro3 = {
 
 const anBinh_pro2 = {
     "Project": "VIP Customer",
-    "Description": "<p>Import data from core software when start day, calculate scores for customer based on volume trading of them. Support manager build bonus customer policy.</p>",
+    "Description": "<p>Import data from core software when start day, calculate scores for customer based on volume trading of them. Support manager to build bonus customer policy.</p>",
     "Platform": "<i>Web form ASP.NET c#, ADO.NET</i><br><i>Database is SQL server</i>",
     "Tool": "Visual studio 2010, Sql management tool",
     "TeamSize": "Only me",
