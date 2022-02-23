@@ -115,4 +115,20 @@ function bodyOnload() {
 
     // Load data for BKAV
     document.getElementById('projects_bkav').innerHTML = fn(goline_bkav);
+
+    setTimeout(() => {
+        const loadImgs = document.getElementsByClassName('load-img-async');
+        if (loadImgs && loadImgs.length > 0) {
+            for (const x of loadImgs) {
+                x.setAttribute('src', x.getAttribute('data-src'));
+            }
+        }
+    }, 10);
+}
+
+function viewMedAidAward() {
+    document.getElementById('id01').style.display = 'block'
+    const medAidAward = document.getElementById('med-aid-award');
+    const src = medAidAward.getAttribute('data-src');
+    medAidAward.setAttribute('src', src);
 }
