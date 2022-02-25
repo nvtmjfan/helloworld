@@ -1,5 +1,5 @@
 const medaid_pro3 = {
-    "Project": "Oncology Infomation System (OIS)",
+    "Project": "Oncology Infomation System (OIS) <small class='float-right mr-1'><i><a href='http://prowess.com/products/panther-ois/' target='_blank'>About Product</a></i></small>",
     "Description": "<p>Import, export DICOM file. Store radiotherapy treamtment plan of patient: eg beam, control points, store testings of patient include image CT, MRI. Support doctor to view plan, view image, send plan to RV.</p>",
     "Platform": "<i>Frontend is Angular 6+, Silmusoft Report</i><br><i>Backend is Restfull API .Net Framework 4.6.1 c#, Entity Framework</i><br><i>Database is SQL server 2017</i>",
     "Tool": "Visual Code, Visual studio 2019, Sql management tool",
