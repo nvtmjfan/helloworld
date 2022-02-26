@@ -123,6 +123,17 @@ function bodyOnload() {
                 x.setAttribute('src', x.getAttribute('data-src'));
             }
         }
+
+        if ('loading' in HTMLImageElement.prototype) {
+            // Browser supports `loading`..
+            const medAidAward = document.getElementById('med-aid-award');
+            const src = medAidAward.getAttribute('data-src');
+            medAidAward.setAttribute('src', src);
+        } else {
+            // Fetch and apply a polyfill/JavaScript library
+            // for lazy-loading instead.
+            console.log('Not suport lazy-loading');
+        }
     }, 10);
 }
 
