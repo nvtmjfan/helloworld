@@ -38,16 +38,6 @@ h2 {
     padding-right: 0.2em;
 }
 
-@media print {
-    a {
-        display: none;
-    }
-}
-
-@page {
-    margin: 1px;
-}
-
 .w3-modal {
     z-index: 3;
     display: none;
