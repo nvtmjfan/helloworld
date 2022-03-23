@@ -12,13 +12,11 @@ body {
         box-shadow: 5px 5px 5px 5px #888;
         padding-bottom: 1em;
     }
-    #overview {
+    #summaryExp {
         position: fixed;
-        left: 3%;
+        left: 1em;
         top: 1em;
-        height: 10em;
         box-shadow: 2px 2px 2px 2px #888;
-        border: none;
     }
 }
 
