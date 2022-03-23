@@ -109,7 +109,7 @@ function bodyOnload() {
 
     // Load data for Goline
     ret = '';
-    let projectsAtGoline = [goline_pro2, goline_pro2];
+    let projectsAtGoline = [goline_pro2, goline_pro1];
     projectsAtGoline.forEach(x => ret += fn(x));
     document.getElementById('projects_goline').innerHTML = ret;
 
