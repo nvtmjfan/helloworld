@@ -32,7 +32,7 @@ const anBinh_pro3 = {
     "Platform": "<i>Web form ASP.NET c#, Entity Framework</i><br><i>Database is SQL server</i>",
     "Tool": "Visual studio 2013, Sql management tool",
     "TeamSize": "Include 2 developers",
-    "Position": "Developer, from Aug 2018 to current"
+    "Position": "Developer, from Jan 2017 to Apr 2017"
 }
 
 const anBinh_pro2 = {
@@ -50,7 +50,7 @@ const anBinh_pro1 = {
     "Platform": "<i>Web form ASP.NET c#, ADO.NET</i><br><i>Database is SQL Oracle 12c</i>",
     "Tool": "Visual studio 2010, Toad",
     "TeamSize": "Include 2 developers",
-    "Position": "Developer, from Dec 2015 to Nov 2017"
+    "Position": "Developer, from Aug 2015 to Nov 2017"
 }
 
 // For Goline
