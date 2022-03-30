@@ -126,9 +126,7 @@ function bodyOnload() {
 
         if ('loading' in HTMLImageElement.prototype) {
             // Browser supports `loading`..
-            const medAidAward = document.getElementById('med-aid-award');
-            const src = medAidAward.getAttribute('data-src');
-            medAidAward.setAttribute('src', src);
+            medAidAward.src = medAidAward.getAttribute("data-src");
         } else {
             // Fetch and apply a polyfill/JavaScript library
             // for lazy-loading instead.
@@ -140,10 +138,8 @@ function bodyOnload() {
 }
 
 function viewMedAidAward() {
-    document.getElementById('id01').style.display = 'block'
-    const medAidAward = document.getElementById('med-aid-award');
-    const src = medAidAward.getAttribute('data-src');
-    medAidAward.setAttribute('src', src);
+    id01.style.display = 'block'
+    medAidAward.src = medAidAward.getAttribute("data-src");
 }
 
 /**
@@ -165,3 +161,11 @@ function bindHtml(elTarget, fileSource) {
     xhttp.open("GET", fileSource, true);
     xhttp.send();
 }
+
+function onScroll() {
+    if ((window.scrollY + window.innerHeight) / document.body.offsetHeight >= 0.8) {
+        medAidAward.src = medAidAward.getAttribute("data-src");
+        window.removeEventListener('scroll', onScroll);
+    }
+}
+window.addEventListener('scroll', onScroll);
