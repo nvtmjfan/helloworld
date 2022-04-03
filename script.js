@@ -154,7 +154,10 @@ function bindHtml(elTarget, fileSource) {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-            if (this.status == 200) { elTarget.innerHTML = this.responseText; }
+            if (this.status == 200) {
+                elTarget.innerHTML = this.responseText;
+                elTarget.classList.remove("d-none");
+            }
             if (this.status == 404) { elTarget.innerHTML = "Page not found."; }
         }
     }
