@@ -126,7 +126,8 @@ function bodyOnload() {
 
         if ('loading' in HTMLImageElement.prototype) {
             // Browser supports `loading`..
-            medAidAward.src = medAidAward.getAttribute("data-src");
+            medAidAward.src = medAidAward.getAttribute("data-src")
+            anbinhAward.src = anbinhAward.getAttribute("data-src")
         } else {
             // Fetch and apply a polyfill/JavaScript library
             // for lazy-loading instead.
@@ -137,9 +138,22 @@ function bodyOnload() {
     bindHtml(summaryExp);
 }
 
-function viewMedAidAward() {
-    id01.style.display = 'block'
-    medAidAward.src = medAidAward.getAttribute("data-src");
+function viewAward(id) {
+    id01.style.visibility = 'visible'
+    const el = document.getElementById(id)
+    el.src = el.getAttribute("data-src")
+    el.style.visibility = 'visible'
+    el.style.display = 'block'
+    id01Content.style.width = el.offsetWidth + 'px'
+    const top = (window.innerHeight - el.offsetHeight) / 2
+    const left = (window.innerWidth - el.offsetWidth) / 2
+    id01Content.style.top = top + 'px'
+    id01Content.style.left = left + 'px'
+    const images = id01.querySelectorAll('.img-fluid')
+    for (const item of images) {
+        if (item != el)
+            item.style.display = 'none'
+    }
 }
 
 /**
@@ -167,8 +181,19 @@ function bindHtml(elTarget, fileSource) {
 
 function onScroll() {
     if ((window.scrollY + window.innerHeight) / document.body.offsetHeight >= 0.8) {
-        medAidAward.src = medAidAward.getAttribute("data-src");
-        window.removeEventListener('scroll', onScroll);
+        medAidAward.src = medAidAward.getAttribute("data-src")
+        anbinhAward.src = anbinhAward.getAttribute("data-src")
+        window.removeEventListener('scroll', onScroll)
     }
 }
 window.addEventListener('scroll', onScroll);
+
+function closeModal() {
+    id01.style.visibility = 'hidden'
+    id01Content.style.width = ''
+    const images = id01.querySelectorAll('.img-fluid')
+    for (const item of images) {
+        item.style.visibility = 'hidden'
+        item.style.display = 'none'
+    }
+}

@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js?updated=1"></script>
+    <link rel="stylesheet" href="style.css?updated=1" />
+    <script src="script.js?updated=2"></script>
     <title>CV of Trung Nguyen</title>
 </head>
 
@@ -131,7 +131,11 @@
         <div class="row">
             <div class="col-md-12 company">
                 - Award for Representative Employee of the Year 2021 at Med Aid.
-                <a href="javascript:;" onclick="viewMedAidAward()" class="d-print-none">View</a>
+                <a href="javascript:;" onclick="viewAward('medAidAward')" class="d-print-none">View</a>
+            </div>
+            <div class="col-md-12 company">
+                - Certificate of Merit for successfully completing tasks in 2016 at An Binh bank.
+                <a href="javascript:;" onclick="viewAward('anbinhAward')" class="d-print-none">View</a>
             </div>
             <div class="col-md-12 company">
                 - My small game: puzzle with some default image and allow the player choose any other image. Written in html, javascript and css bootstrap.
@@ -155,9 +159,10 @@
         </div>
 
         <div id="id01" class="w3-modal">
-            <div class="w3-modal-content w3-animate-top">
-                <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-display-topright w3-large">&times;</span>
+            <div class="w3-modal-content" id="id01Content">
+                <span onclick="closeModal()" class="w3-button w3-display-topright w3-large">&times;</span>
                 <img id="medAidAward" data-src="med-aid_award.jpg" src="" alt="Med-Aid award" class="img-fluid" loading="lazy">
+                <img id="anbinhAward" data-src="an_binh_award.jpg" src="" alt="An Binh award" class="img-fluid" loading="lazy">
             </div>
         </div>
     </div>
