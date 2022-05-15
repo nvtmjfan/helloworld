@@ -1,6 +1,6 @@
 const medaid_pro3 = {
     "Project": "Oncology Infomation System (OIS) <small class='float-right mr-1'><i><a href='http://prowess.com/products/panther-ois/' target='_blank' class='d-print-none'>About Product</a></i></small>",
-    "Description": "<p>Import, export DICOM file. Store radiotherapy treamtment plan of patient: eg beam, control points, store testings of patient include image CT, MRI. Support doctor to view plan, view image, send plan to RV.</p>",
+    "Description": "<p>Import, export DICOM file. Store radiotherapy treamtment plan of patient: eg beam, control points. Store testings of patient include image CT, MRI. Support doctor to view plan, view image. Send plan (DICOM file) to RV.</p>",
     "Platform": "<i>Frontend is Angular 6+, Silmusoft Report, run on engine Electron like Desktop app</i><br><i>Backend is Restfull API .Net Framework 4.6.1 c#, Entity Framework</i><br><i>Database is SQL server 2017</i>",
     "Tool": "Visual Code, Visual studio 2019, Sql management tool",
     "TeamSize": "Include 5 developers, 2 QAs and 1 PM",
@@ -144,6 +144,20 @@ function viewAward(id) {
     el.src = el.getAttribute("data-src")
     el.style.visibility = 'visible'
     el.style.display = 'block'
+    if (window.innerHeight < el.offsetHeight) {
+        if (!el.originH) {
+            el.originH = el.offsetHeight
+            el.originW = el.offsetWidth
+        }
+        const rate = (window.innerHeight - 20) / el.offsetHeight
+        const newW = rate * el.originH
+        const newH = rate * el.originW
+        el.style.height = `${newW}px`
+        el.style.width = `${newH}px`
+    } else if (el.originH && window.innerHeight > el.originH) {
+        el.style.height = `${el.originH}px`
+        el.style.width = `${el.originW}px`
+    }
     id01Content.style.width = el.offsetWidth + 'px'
     const top = (window.innerHeight - el.offsetHeight) / 2
     const left = (window.innerWidth - el.offsetWidth) / 2
@@ -163,8 +177,8 @@ function viewAward(id) {
  * @returns void
  */
 function bindHtml(elTarget, fileSource) {
-    if (!fileSource) return bindHtml(elTarget, elTarget.getAttribute('src-html'))
-        /*make an HTTP request using the attribute value as the file name:*/
+    if (!fileSource) return bindHtml(elTarget, elTarget.getAttribute('src-html'));
+    /*make an HTTP request using the attribute value as the file name:*/
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
@@ -197,3 +211,22 @@ function closeModal() {
         item.style.display = 'none'
     }
 }
+
+function toggleSumExp() {
+    if (!summaryExp.style.display || summaryExp.style.display == 'none') {
+        summaryExp.style.display = 'block'
+        summaryExp.style.position = 'absolute'
+        const right = (window.innerWidth - mainiDiv.offsetWidth) / 2 + 10
+        summaryExp.style.right = `${right}px`
+        summaryExp.style.top = '1.7em'
+        summaryExp.style['box-shadow'] = '2px 2px 2px 2px #888'
+        aSummaryExp.innerHTML = 'Hide summary experience'
+    } else {
+        summaryExp.style.display = 'none'
+        aSummaryExp.innerHTML = 'Show summary experience'
+    }
+}
+
+window.addEventListener('resize', () => {
+    summaryExp.style.display = 'none'
+});

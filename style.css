@@ -12,11 +12,26 @@ body {
         box-shadow: 5px 5px 5px 5px #888;
         padding-bottom: 1em;
     }
+}
+
+@media (min-width: 1900px) {
     #summaryExp {
         position: fixed;
         left: 1em;
         top: 1em;
         box-shadow: 2px 2px 2px 2px #888;
+    }
+    #sSummaryExp {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1899px) {
+    #summaryExp {
+        display: none;
+    }
+    #sSummaryExp {
+        visibility: visible;
     }
 }
 

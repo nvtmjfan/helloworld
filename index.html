@@ -5,20 +5,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css?updated=1" />
-    <script src="script.js?updated=2"></script>
+    <link rel="stylesheet" href="style.css?updated=2" />
+    <script src="script.js?updated=3"></script>
     <title>CV of Trung Nguyen</title>
 </head>
 
 <body onload="bodyOnload()">
-    <div class="container">
+    <div class="container" id="mainiDiv">
         <div class="row">
             <div class="col-md-3">
                 <img data-src="myface.jpg" src="" alt="My face" class="img-fluid load-img-async"></img>
             </div>
             <div class="col-md-9">
                 <h1>Trung Nguyen Viet</h1>
-                <h6>Senior developer c# and angular 6+</h6>
+                <h6>Senior developer c# and angular 6+ <small id="sSummaryExp" onclick="toggleSumExp()"><i><a href="javascript:;" id="aSummaryExp">Show summary experience</a></i></small></h6>
                 <div class="row">
                     <label for="" class="col-md-2">Birth day:</label>
                     <div class="col-auto">May 19 1988 (<span id="age"></span> ages)</div>
