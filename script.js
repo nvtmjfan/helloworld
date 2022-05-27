@@ -73,8 +73,8 @@ const goline_pro1 = {
 }
 
 // For BKAV
-const goline_bkav = {
-    "Project": "Human Resource Management System",
+const bkav = {
+    "Project": "Human Resource Management System <small class='float-right mr-1'><i><a href='https://www.bkav.com.vn/bkav-sme#bkavhrm' target='_blank' class='d-print-none'>About Product</a></i></small>",
     "Description": "<p>Overall management of human resources, with the highest customization ability, to meet the scale from Groups, Corporations to small and medium enterprises.</p>",
     "Platform": "<i>ASP.NET MVC c#</i><br><i>Database is SQL server</i>",
     "Tool": "Visual Studio 2010, Sql management tool, Microsoft word, UML tool Rational Rose",
@@ -114,7 +114,7 @@ function bodyOnload() {
     document.getElementById('projects_goline').innerHTML = ret;
 
     // Load data for BKAV
-    document.getElementById('projects_bkav').innerHTML = fn(goline_bkav);
+    document.getElementById('projects_bkav').innerHTML = fn(bkav);
 
     setTimeout(() => {
         const loadImgs = document.getElementsByClassName('load-img-async');
